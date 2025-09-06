@@ -1,0 +1,49 @@
+##############################
+# pyproject.toml for the LAE‑KNN package
+#
+# This project defines a pip‑installable package implementing the
+# Locally Adaptive Evidential K‑Nearest Neighbours (LAE‑KNN) algorithm.
+# It uses a static setuptools build backend and declares metadata
+# including the author and affiliation provided by the user.
+
+[project]
+name = "laeknn"
+version = "0.1.0"
+description = "Locally Adaptive Evidential K‑Nearest Neighbours (LAE‑KNN) algorithm"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    { name = "Okunola Orogun", email = "no-reply@endowtech.com" },
+]
+maintainers = [
+    { name = "Endow Tech Limited", email = "no-reply@endowtech.com" },
+]
+keywords = ["machine learning", "knn", "classification", "uncertainty"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+"Homepage" = "https://endowtech.example.com/laeknn"
+"Source" = "https://endowtech.example.com/laeknn"
+
+[tool.setuptools]
+# Tell setuptools to include the 'laeknn' package located in the current
+# project directory.  Without this section, setuptools may not detect
+# the package defined in the ``laeknn`` folder when building the sdist.
+packages = ["laeknn"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
