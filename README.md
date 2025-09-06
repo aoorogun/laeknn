@@ -32,6 +32,8 @@ The library exposes a single class `LAEKNN`.  Below is a minimal example of
 training and evaluating the model on the Iris dataset using scikit‑learn:
 
 ```python
+pip install git+https://github.com/aoorogun/laeknn.git
+
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -40,7 +42,7 @@ from laeknn import LAEKNN
 X, y = load_iris(return_X_y=True)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
 
-# initialise the model with default hyper‑parameters
+
 clf = LAEKNN(per_class_centers=3, m=6, k_density=6, beta=0.4, tau=0.8, lam=1e-2)
 clf.fit(X_train, y_train)
 predictions = clf.predict(X_test)
