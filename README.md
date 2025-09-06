@@ -28,12 +28,19 @@ intuition in a simple machine learning model.
 
 ## Basic usage
 
-The library exposes a single class `LAEKNN`.  Below is a minimal example of
-training and evaluating the model on the Iris dataset using scikit‑learn:
+The library exposes a single class `LAEKNN`.
 
+for terminal:
 ```python
 pip install git+https://github.com/aoorogun/laeknn.git
+```
+for Jupyter notebook:
+```python
+!pip install git+https://github.com/aoorogun/laeknn.git
+```
 
+sample code using the iris dataset
+```python
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
